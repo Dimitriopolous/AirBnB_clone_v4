@@ -1,8 +1,8 @@
 <img src="https://github.com/jarehec/AirBnB_clone_v3/blob/master/dev/HBTN-hbnb-Final.png" width="160" height=auto />
 
-# AirBnB Clone: Phase # 3
+# AirBnB Clone: Phase # 4
 
-: API with Swagger
+: Making the web page dynamic using JQuery
 
 ## Description
 
