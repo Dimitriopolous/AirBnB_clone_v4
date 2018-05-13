@@ -22,16 +22,16 @@ $.ajax({
   type: 'POST',
   url: 'http://0.0.0.0:5001/api/v1/places_search/',
   contentType: 'application/json',
-  data: '{}',
+  data: JSON.stringify({}),
   dataType: 'json'
 })
   .done(function (data) {
     data.sort((a, b) => {
       return a.name.localeCompare(b.name);
     });
-    data.forEach((place) => {
+    data.forEach(function (place) {
       const article = $(document.createElement('article'));
-      const h2 = $(document.createElement('h2').text(place.name));
+      const h2 = $(document.createElement('h2')).text(place.name);
       article.append(h2);
       const priceDiv = $(document.createElement('div')).addClass('price_by_night');
       const price = $(document.createElement('p')).text(`$${place.price_by_night}`);
