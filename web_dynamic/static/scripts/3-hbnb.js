@@ -59,7 +59,7 @@ $.ajax({
             ${place.description}
           </div>
       </article>
-      `
+      `;
       $('section.places').append(info);
     });
   });
