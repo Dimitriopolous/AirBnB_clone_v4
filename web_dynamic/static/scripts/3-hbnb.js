@@ -5,7 +5,7 @@ $(() => {
       $('#api_status').addClass('available');
     }
   });
- 
+
   $('input[type=checkbox]').click(function () {
     if (this.checked) {
       checks[this.dataset.id] = this.dataset.name;

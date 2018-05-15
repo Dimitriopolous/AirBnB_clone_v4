@@ -1,9 +1,9 @@
 let checks = {};
 $(() => {
   $.get(('http://0.0.0.0:5001/api/v1/status/'), function (data) {
-  if (data.status === 'OK') {
-    $('#api_status').addClass('available');
-  }
+    if (data.status === 'OK') {
+      $('#api_status').addClass('available');
+    }
   });
 
   $('input[type=checkbox]').click(function () {
@@ -35,7 +35,7 @@ $('#button').click(function (event) {
     contentType: 'application/json',
     data: checkedObjs,
     dataType: 'json',
-    error: console.log("ERROR")
+    error: console.log('ERROR')
   })
     .done(postPlaces);
 });
