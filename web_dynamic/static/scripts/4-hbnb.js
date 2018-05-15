@@ -4,6 +4,7 @@ $(() => {
     data.sort((a, b) => {
       return a.name.localeCompare(b.name);
     });
+    console.log(data);
     data.forEach(function (place) {
       let info = ` 
       <article>
@@ -35,6 +36,7 @@ $(() => {
       </div>
       </article>
       `;
+      $('section.places').empty();
       $('section.places').append(info);
     });
   }
@@ -61,7 +63,7 @@ $(() => {
       url: 'http://0.0.0.0:5001/api/v1/places_search/',
       contentType: 'application/json',
       data: JSON.stringify(checkedObjs),
-      dataType: 'json'
+      dataType: 'json',
     })
       .done(postPlaces);
   });
