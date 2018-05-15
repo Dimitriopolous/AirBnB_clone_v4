@@ -1,8 +1,6 @@
-$.get(('http://0.0.0.0:5001/api/v1/status/'), function (data, status) {
-  if (status === 200) {
-    $('DIV#api_status').addClass('available');
-  } else {
-    $('DIV#api_status').removeClass('available');
+$.get(('http://0.0.0.0:5001/api/v1/status/'), function (data) {
+  if (data.status === 'OK') {
+    $('#api_status').addClass('available');
   }
 });
 
