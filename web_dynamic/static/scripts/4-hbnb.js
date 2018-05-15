@@ -26,15 +26,17 @@ $.ajax({
   dataType: 'json'
 })
   .done(postPlaces);
-$('button').click(function (event) {
+$('#button').click(function (event) {
   let checkedObjs = {};
+  alert('CLICK SUCCESSFUL!');
   checkedObjs.amenities = Object.keys(checks);
   $.ajax({
     type: 'POST',
     url: 'http://0.0.0.0:5001/api/v1/places_search/',
     contentType: 'application/json',
     data: checkedObjs,
-    dataType: 'json'
+    dataType: 'json',
+    error: console.log("ERROR")
   })
     .done(postPlaces);
 });
