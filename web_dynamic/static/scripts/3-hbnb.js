@@ -1,11 +1,11 @@
-$.get(('http://0.0.0.0:5001/api/v1/status/'), function (data) {
-  if (data.status === 'OK') {
-    $('#api_status').addClass('available');
-  }
-});
-
 let checks = {};
 $(() => {
+  $.get(('http://0.0.0.0:5001/api/v1/status/'), function (data) {
+    if (data.status === 'OK') {
+      $('#api_status').addClass('available');
+    }
+  });
+ 
   $('input[type=checkbox]').click(function () {
     if (this.checked) {
       checks[this.dataset.id] = this.dataset.name;
