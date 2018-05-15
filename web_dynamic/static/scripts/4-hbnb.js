@@ -4,7 +4,6 @@ $(() => {
     data.sort((a, b) => {
       return a.name.localeCompare(b.name);
     });
-    console.log(data);
     $('section.places').empty();
     data.forEach(function (place) {
       let info = ` 
