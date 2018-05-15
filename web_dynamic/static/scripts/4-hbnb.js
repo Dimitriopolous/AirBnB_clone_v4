@@ -27,7 +27,7 @@ $(() => $.ajax({
 
 $('#button').click(function (event) {
   let checkedObjs = {};
-  alert('CLICK SUCCESSFUL!');
+  console.log('CLICK SUCCESSFUL!');
   checkedObjs.amenities = Object.keys(checks);
   $.ajax({
     type: 'POST',
