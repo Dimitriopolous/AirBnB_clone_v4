@@ -5,6 +5,7 @@ $(() => {
       return a.name.localeCompare(b.name);
     });
     console.log(data);
+    $('section.places').empty();
     data.forEach(function (place) {
       let info = ` 
       <article>
@@ -36,8 +37,7 @@ $(() => {
       </div>
       </article>
       `;
-      $('section.places').empty();
-      $('section.places').append(info);
+    $('section.places').append(info);
     });
   }
   $.get(('http://0.0.0.0:5001/api/v1/status/'), function (data) {
@@ -56,7 +56,6 @@ $(() => {
   });
   $('#button').click(function () {
     let checkedObjs = {};
-    console.log('CLICK SUCCESSFUL!');
     checkedObjs.amenities = Object.keys(checks);
     $.ajax({
       type: 'POST',

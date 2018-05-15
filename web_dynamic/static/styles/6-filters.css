@@ -17,6 +17,12 @@
 	position: relative;
 }
 
+#dropdown {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
 .container .filters .locations {
 	width: 25%;
 	border-right: 1px solid #DDDDDD;
